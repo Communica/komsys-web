@@ -1,0 +1,826 @@
+/*
+Theme Name: Communica
+Theme URI: http://www.komsys.org/
+Description: Communica-design bygget p&aring; det orginale WordPress-temaet.
+Version: 1.0
+Author: Christopher Tvedt, 06HKOM
+Author URI: http://www.ctvedt.net/
+Tags: fixed width, two columns
+*/
+
+/*
+ # indicates an ID   - ID is unique
+ . indicates a class - class is NOT unique
+*/
+
+html, body 
+{
+  padding: 0;
+  margin: 0;
+  background-color: #171817;
+  background-image: url('img/bg-dotted.gif');
+  font-family: "Lucida Sans Unicode", sans-serif;
+  text-align: center;
+  height: 100%;
+}
+
+/*** Standardfarge for linker ***/
+
+a, a:hover, a:active {
+  text-decoration: none;
+  color: #f47921;
+}
+
+/*** Konteinere, en rundt alt (for sentrering) og en konteiner for hovedinnhold ***/
+
+#container 
+{
+  position:relative;	/* needed for footer positioning */
+  min-height:100%;		/* real browsers */
+  margin-bottom: 100px;
+  background-image: url('img/bg-main.png');
+  background-repeat: repeat-y;
+  background-position: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right:auto;
+  margin-left:auto;
+  padding: 0;
+  width: 1040px;
+} 
+
+#main-container
+{
+  padding: 0;
+  width: 996px;
+  margin-left: 22px;
+  margin-right: 22px;
+  background-color: #eec995;
+}
+
+/*** main er for to-kolonne siden med sidebar, main-nocol er for sider hvor innholdet bruker hele bredden ***/
+
+#main
+{
+  float: left;
+  padding: 10px;
+  width: 676px;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#main-nocol
+{
+  float: left;
+  padding: 10px;
+  width: 100%
+  color: #000000;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#col-two 
+{
+	width: 300px;
+	float: right;
+	margin: 0;
+	padding: 0;
+	}
+
+#partners
+{
+	height: 325px;
+	width: 300px;
+	float: right;
+	background: url('img/partnere.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/*** footer og header ***/
+
+#footer
+{
+  clear:both;
+  position: absolute;
+  bottom: 0px; 
+  height: 100px; 
+  left: 22px;
+  width: 996px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.7em;
+  height: 22px;
+  line-height: 22px;
+  background-color: #8b5e3c;
+  color: #ffffff;
+}
+
+#clearfooter
+{
+  margin-top: 25px;
+  clear:both;
+}
+
+#header
+{
+  width: 1040px;
+  height: 215px;
+  background-image: url('img/header.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+/*** Menylinjen ***/
+
+#menu
+{
+  float: left;
+  width: 1040px;
+  height: 40px;
+  background-image: url('img/menu.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  font-family: "Lucida Sans Unicode", sans-serif;
+  font-size: 1em;
+  color: #ffffff;
+}
+
+#menu a
+{
+  font-family: "Lucida Sans Unicode", sans-serif;
+  font-size: 1em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#menu a:hover, a:active
+{
+  font-family: "Lucida Sans Unicode", sans-serif;
+  font-size: 1em;
+  color: #f47921;
+  text-decoration: none;
+}
+
+#menu li
+{
+  display: inline;
+  padding-right: 30px;
+}
+
+#menu ul
+{
+  list-style-type: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/*** CSS-"tabell" til bruk for å vise tlf, klasse og epost til styremedlemmer ***/
+
+.styret-tabell {
+	width:600px;
+	position:relative;
+}
+
+.styret-tabell-v {
+	position:absolute;
+	left:120px;
+	width:200px;
+}
+
+.styret-tabell-m {
+	position:absolute;
+	left:230px;
+	width:200px;
+}
+
+.styret-tabell-h {
+	position:absolute;
+	left:360px;
+	width:200px;
+}
+
+.styret-profilbilde {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	float: left;
+	height: 100px;
+	border: solid 1px #7a5238;
+}
+
+/*** De ulike variantene av innholdsbokser ***/
+/*** Bruksmåte : "boks curved farge", eks "box-top curved orange" ***/
+
+.clear
+{
+	clear: both;
+}
+
+.curved
+{
+    behavior: url('http://komsys.org/linjeforening/wp-content/themes/communica/border-radius.htc');	/* IE + Opera hack */
+    border-radius: 20px;				/* Default CCSS  */
+    -moz-border-radius: 10px;			/* Mozilla		 */
+    -webkit-border-radius: 10px;		/* Chrome/Safari */
+    -khtml-border-radius: 10px;			/* Konquerer 	 */
+}
+
+
+.light {
+	background-color: #fff0da;
+}
+
+.middlelight {
+	background-color: #ffe9c5;
+}
+
+.middlelighter {
+	background-color: #ffdda5;
+}
+
+.middle {
+	background-color: #ffd58f;
+}
+
+.orange {
+	background-color: #f47921;
+}
+
+.lightdark {
+	background-color: #835e45;
+}
+
+.dark {
+	background-color: #7a5238;
+}
+
+.box-top 
+{
+	border:solid 1px #f0b172;
+	float: left;
+	width: 635px;
+	padding: 5px;
+	margin: 10px;
+	font-family: "Lucida Sans Unicode", sans-serif;
+	color: #8b5e3c;
+	font-size: 13px;
+}
+
+.box-main 
+{ 
+	border:solid 1px #f0b172;
+	float: left;
+	width: 635px;
+	padding: 5px;
+	margin: 10px;
+	font-family: "Lucida Sans Unicode", sans-serif;
+	color: #8b5e3c;
+	font-size: 13px;
+}
+
+.box-full 
+{
+	border:solid 1px #f0b172;
+	float: left;
+	width: 945px;
+	padding: 5px;
+	margin: 10px;
+	font-family: "Lucida Sans Unicode", sans-serif;
+	color: #8b5e3c;
+	font-size: 13px;
+}
+
+.box-bottom-2x 
+{
+	float: left;
+	border:solid 1px #f0b172;
+	width: 301px;
+	padding: 5px;
+	margin: 10px;
+	font-family: "Lucida Sans Unicode", sans-serif;
+	color: #8b5e3c;
+	font-size: 11px;
+}
+
+.box-right 
+{
+	float: right;
+	border:solid 1px #f0b172;
+	width: 280px;
+	padding: 5px;
+	margin: 15px;
+	font-family: "Lucida Sans Unicode", sans-serif;
+	color: #fff0da;
+	font-size: 11px;
+	text-align:left;
+}
+
+.box-bottom-rightbig 
+{
+	float: left;
+	border:solid 1px #f0b172;
+	width: 455px;
+	padding: 5px;
+	margin: 10px;
+	font-family: "Lucida Sans Unicode", sans-serif;
+	color: #fff0da;
+	font-size: 13px;
+}
+
+.box-bottom-leftbig 
+{
+	float: left;
+	border:solid 1px #f0b172;
+	width: 455px;
+	padding: 5px;
+	margin: 10px;
+	font-family: "Lucida Sans Unicode", sans-serif;
+	color: #8b5e3c;
+	font-size: 13px;
+}
+
+.curved-box-text 
+{
+	margin: 0 5px 0 5px;
+}
+
+.box-full h1, .box-main h1, .box-top h1, .box-bottom-rightbig h1, .box-bottom-leftbig h1 
+{
+	font-size: 22px;
+	color: #f47921;
+	margin: 0 0 10px 0;
+	padding: 0 0 0 60px;
+	border-bottom: solid 2px #fdc369;
+	background: url('img/dots.png');
+	background-repeat: no-repeat;
+	background-position: 4px center;
+}
+
+.box-bottom-2x h1, .box-right h1, .newslist h3
+{
+	font-size: 14px;
+	color: #f47921;
+	margin: 0;
+	padding: 0 0 3px 35px;
+	background: url('img/dots-small.png');
+	background-repeat: no-repeat;
+	background-position: 2px 5px;
+}
+
+.box-bottom-2x h1, .newslist h3
+{
+	border-bottom: solid 1px #fdc369;
+}
+
+.box-right h1{
+	border-bottom: solid 1px #a46b2f;
+}
+
+.newslist
+{
+	padding: 1px 5px 1px 5px;
+	margin: 2px 2px 15px 2px;
+}
+
+/*** Infolinje for nyhetssakene ***/
+
+.infoline {
+	color: #888888;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 10px;
+}
+
+ul.aktivitetsinfo {
+	color: #ffd58f;
+	padding: 0;
+	font-size: 11px;
+	list-style-position: outside;
+	list-style-type: none;
+}
+ul.aktivitetsinfo li {
+	padding-bottom: 6px;
+}
+
+.infoline small{
+	font-size: 9px;
+}
+
+.infoline img, .aktivitetsinfo img {
+	vertical-align:text-top;
+	margin-left: 5px;
+}
+
+.attachment-post-thumbnail, .attachment-single-post-thumbnail {
+	padding: 0;
+	margin: 0 10px 7px 0;
+	display: inline;
+	float: left;
+	border: 1px solid #7a5238;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.alignright img, .alignleft img {
+	vertical-align:text-top;
+	margin: 0 5px 0 5px;
+}
+
+/* WP DEFAULT */
+
+/* Begin Typography & Colors */
+
+.commentlist li, #commentform input, #commentform textarea {
+	font: 0.9em "Lucida Sans Unicode", sans-serif;
+	}
+.commentlist li ul li {
+	font-size: 1em;
+}
+
+.commentlist li {
+	font-weight: bold;
+}
+
+.commentlist li .avatar { 
+	float: right;
+	border: 1px solid #eee;
+	padding: 2px;
+	background: #fff;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+#commentform p {
+	font-family: "Lucida Sans Unicode", sans-serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+#wp-calendar #prev a, #wp-calendar #next a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em "Lucida Sans Unicode", sans-serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+.narrowcolumn {
+	float: left;
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	width: 450px;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+
+.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	}
+
+.post hr {
+	display: block;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+
+.widecolumn .smallattachment {
+	text-align: center;
+	float: left;
+	width: 128px;
+	margin: 5px 5px 5px 0px;
+}
+
+.widecolumn .attachment {
+	text-align: center;
+	margin: 5px 0px;
+}
+
+.postmetadata {
+	clear: both;
+}
+
+.clear {
+	clear: both;
+}
+
+/* End Structure */
+
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+
+.alignleft {
+	float: left;
+	}
+/* End Images */
+
+
+
+/* Begin Form Elements */
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px;
+	text-align: center;
+	}
+
+#sidebar #searchform #s {
+	width: 108px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform {
+	margin: 5px 10px 0 0;
+	}
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+#respond:after {
+		content: "."; 
+	    display: block; 
+	    height: 0; 
+	    clear: both; 
+	    visibility: hidden;
+	}
+#commentform #submit {
+	margin: 0 0 5px auto;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	margin: 0;
+	padding: 5px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 10px 0 0px;
+	padding: 5px 5px 10px 10px;
+	list-style: none;
+
+	}
+.commentlist li ul li { 
+	margin-right: -5px;
+	margin-left: 10px;
+}
+
+.commentlist p {
+	margin: 0px 5px 0px 0;
+}
+.children { padding: 0; }
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+.hidden {
+	display: none;
+	}
+	
+.screen-reader-text {
+     position: absolute;
+     left: -1000em;
+}
+
+hr {
+	display: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	}
+/* End Various Tags & Classes*/
+
+
+
+/* Captions */
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+/* End captions */
+
