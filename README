@@ -7,4 +7,14 @@
 ## origin
 This theme was originally made by Christopher Tvedt
 
+## Drift branch
+This is the branch that is actually running on the webserver. 
+Changes here should be stable and of a quality your mom could be proud of.
 
+To update this branch, merge the development branch you have been working with your cool new feature on with the drift branch
+
+When in the drift branch:
+git merge experimental 
+
+further readings:
+http://book.git-scm.com/3_basic_branching_and_merging.html
