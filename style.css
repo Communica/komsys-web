@@ -70,6 +70,7 @@ a, a:hover, a:active {
   margin-bottom: 20px;
 }
 
+
 #main-nocol
 {
   float: left;
@@ -79,6 +80,23 @@ a, a:hover, a:active {
   text-align: left;
   margin-bottom: 20px;
 }
+
+	/* clearfix */
+#container {
+    display: inline-block;
+}
+#container:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+#container {
+    display: block;
+}
+
 
 #col-two 
 {
